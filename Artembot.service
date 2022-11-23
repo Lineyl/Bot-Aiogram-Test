@@ -1,0 +1,15 @@
+[Unit]
+Description=TGbot
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/AtremBOT
+ExecStart=/usr/bin/python3 /opt/AtremBOT/main.py
+RestartSec=10
+Restart=always
+ 
+[Install]
+WantedBy=multi-user.target
